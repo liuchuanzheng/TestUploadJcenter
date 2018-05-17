@@ -49,9 +49,9 @@ ext {
     //以下三项只是对开源库的描述（应该不是必配项吧，没尝试过）
     libraryName = 'toastutil'
     libraryDescription = 'toastutil的描述'
-    //siteUrl = 'https://github.com/woshidasusu/base-module/tree/master/tv'
+    siteUrl = 'https://github.com/liuchuanzheng/TestUploadJcenter/tree/master/toastutil'
     //开源库对应的 github 地址，不知道可不可以不配，应该也是必配
-    //gitUrl = 'https://github.com/woshidasusu/base-module.git'
+    gitUrl = 'https://github.com/liuchuanzheng/TestUploadJcenter.git'
     //开发者信息，也是必配的吧
     developerId = 'liuchuazheng'
     developerName = 'liuchuanzheng'
