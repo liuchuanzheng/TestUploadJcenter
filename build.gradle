@@ -23,6 +23,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //如果没有上传Jcenter的话，要调用就需要先在项目根目录build.gradle中，添加如下
+        maven {
+            url "https://dl.bintray.com/liuchuanzheng/liuchuanzheng" //在bintray网站上复制
+        }
     }
 }
 
