@@ -13,6 +13,6 @@ import android.widget.Toast;
 
 public class MyToast {
     public static void show(Context context,String msg){
-        Toast.makeText(context,msg,Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,msg+"版本1.0.1",Toast.LENGTH_SHORT).show();
     }
 }

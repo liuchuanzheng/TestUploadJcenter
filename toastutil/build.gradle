@@ -50,7 +50,7 @@ group = "com.liuchuanzheng.support"
 //发布到JCenter上的项目名字，必须填写
 def libName = "toastutil"
 // 版本号，下次更新是只需要更改版本号即可
-version = "1.0.0"
+version = "1.0.1"
 /** 上面配置后上传至JCenter后的编译路径是这样的： compile 'com.liuchuanzheng.support:toastutil:1.0.0' **/
 //生成源文件
 task sourcesJar(type: Jar) {
@@ -91,12 +91,14 @@ install {
                 packaging 'aar'
                 name 'toastutil'
                 url siteUrl
+                // 设置协议证书，通常就是Apache 2.0开源协议
                 licenses {
                     license {
                         name 'The Apache Software License, Version 2.0'
                         url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
                 }
+                //开发者信息
                 developers {
                     developer {
                         id 'liuchuanzheng'
@@ -104,6 +106,7 @@ install {
                         email 'liuchuanzheng4876@gmail.com'
                     }
                 }
+                //配置相关项目链接
                 scm {
                     connection gitUrl
                     developerConnection gitUrl
@@ -114,11 +117,9 @@ install {
     }
 }
 //上传到JCenter
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
-    user = properties.getProperty("bintray.user")//读取 local.properties 文件里面的bintray.user
-    key = properties.getProperty("bintray.apikey")//读取 local.properties 文件里面的bintray.apikey
+    user = "liuchuanzheng"  //账号名
+    key = "b6d852499b9d06989cf4c18e30897ae0dbbafbf8"//网站个人设置里的API Key
     configurations = ['archives']
     pkg {
         repo = "liuchuanzheng"
